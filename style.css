@@ -1,0 +1,120 @@
+h1{
+    color: whitesmoke;
+}
+*{
+    margin: 0;
+    padding: 0;
+
+    background-color: #5a1807;
+    text-align: center;
+}
+
+.container{
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.game{
+    height: 60vmin;
+    width: 60vmin;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5vmin;
+}
+.box{
+    height: 18vmin;
+    width: 18vmin;
+    border-radius: 1rem;
+    background-color: #cbbf7a;
+    font-size: 8vmin;
+    color:olivedrab;
+}
+
+.reset{
+    background-color: #011638;
+    color: whitesmoke;
+    padding: 10px;
+    font-size: 1.25rem;
+    border-radius: 1rem;
+}
+
+/* Popup overlay */
+.msgCont {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: rgba(0, 0, 0, 0.55);
+    backdrop-filter: blur(3px);
+    z-index: 100;
+}
+
+.msgBox {
+    background-color: #fffdf5;
+    padding: 80px 120px;
+    border-radius: 25px;
+    text-align: center;
+
+    width: 450px;
+    min-height: 250px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+}
+
+#msg {
+    color: #222;
+    background-color: transparent;
+
+    font-size: 4.5rem;
+    margin: 0 0 30px;
+}
+
+#newGame {
+    background-color: #011638;
+    color: white;
+
+    padding: 20px 35px;
+    border: none;
+    border-radius: 12px;
+
+    font-size: 3rem;
+    cursor: pointer;
+}
+
+#newGame:hover {
+    background-color: #011638;
+    transform: scale(1.1);
+}
+#newGame:active {
+    transform: scale(0.95);
+}
+
+@keyframes popup {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.hide {
+    display: none;
+}
