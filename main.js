@@ -35,15 +35,15 @@ boxes.forEach(box => {
 });
 
 const disableBox = () => {
-for(let box of boxes){
-        box.disabled = true ;
+    for (let box of boxes) {
+        box.disabled = true;
     }
 }
 
 const enaleBox = () => {
-for(let box of boxes){
-        box.disabled = false ;
-        box.innerText = "" ;
+    for (let box of boxes) {
+        box.disabled = false;
+        box.innerText = "";
     }
 }
 
@@ -59,17 +59,24 @@ const checkwinner = () => {
             if (pos1value === pos2value && pos2value === pos3value) {
                 msg.innerText = `${pos1value} Wins!`;
                 msgContainer.classList.remove("hide");
-                disableBox() ;
+                disableBox();
             }
         }
+
+    }
+
+    if ([...boxes].every(box => box.innerText !== "")) {
+        msg.innerText = "It's a Tie!";
+        msgContainer.classList.remove("hide");
+        disablebox();
     }
 }
 
 const resetGame = () => {
-    turn0 = true ;
-    enaleBox() ;
-    msgContainer.classList.add("hide") ;
+    turn0 = true;
+    enaleBox();
+    msgContainer.classList.add("hide");
 }
 
-newGameBtn.addEventListener("click" ,resetGame) ;
-resetBtn.addEventListener("click" , resetGame) ;
+newGameBtn.addEventListener("click", resetGame);
+resetBtn.addEventListener("click", resetGame);
