@@ -41,8 +41,6 @@ h1{
     font-size: 1.25rem;
     border-radius: 1rem;
 }
-
-/* Popup overlay */
 .msgCont {
     position: fixed;
     inset: 0;
@@ -54,8 +52,6 @@ h1{
     align-items: center;
 
     background-color: rgba(0, 0, 0, 0.55);
-    backdrop-filter: blur(3px);
-    z-index: 100;
 }
 
 .msgBox {
